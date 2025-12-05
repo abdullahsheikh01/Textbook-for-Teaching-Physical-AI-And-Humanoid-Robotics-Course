@@ -104,3 +104,5 @@ Footer should be have clear and responsive interface matching to theme and layou
 
 #### Designing:
 To design the app use CSS Modules.
+
+
