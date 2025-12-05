@@ -5,6 +5,7 @@ param(
     [switch]$Json,
     [string]$ShortName,
     [int]$Number = 0,
+    [string]$DescriptionFilePath,
     [switch]$Help,
     [Parameter(ValueFromRemainingArguments = $true)]
     [string[]]$FeatureDescription
@@ -29,11 +30,14 @@ if ($Help) {
 
 # Check if feature description provided
 if (-not $FeatureDescription -or $FeatureDescription.Count -eq 0) {
-    Write-Error "Usage: ./create-new-feature.ps1 [-Json] [-ShortName <name>] <feature description>"
-    exit 1
+    if (-not $DescriptionFilePath) {
+        Write-Error "Usage: ./create-new-feature.ps1 [-Json] [-ShortName <name>] <feature description> / -DescriptionFilePath <path>"
+        exit 1
+    }
+    $featureDesc = Get-Content $DescriptionFilePath | Out-String
+} else {
+    $featureDesc = ($FeatureDescription -join ' ').Trim()
 }
-
-$featureDesc = ($FeatureDescription -join ' ').Trim()
 
 # Resolve repository root. Prefer git information when available, but fall back
 # to searching for repository markers so the workflow still functions in repositories that
@@ -271,7 +275,7 @@ if (Test-Path $template) {
 
 # Auto-create history/prompts/<branch-name>/ directory (same as specs/<branch-name>/)
 # This keeps naming consistent across branch, specs, and prompts directories
-$promptsDir = Join-Path $repoRoot 'history' 'prompts' $branchName
+$promptsDir = Join-Path $repoRoot "history\prompts\$branchName"
 New-Item -ItemType Directory -Path $promptsDir -Force | Out-Null
 
 # Set the SPECIFY_FEATURE environment variable for the current session
