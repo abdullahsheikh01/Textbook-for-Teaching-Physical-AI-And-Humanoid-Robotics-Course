@@ -1,55 +1,58 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- Sync Impact Report:
+Version change: 0.1.0 → 0.1.1
+Modified principles:
+- [PRINCIPLE_1_NAME] → I. Frontend Framework & UI/UX
+- [PRINCIPLE_2_NAME] → II. Agentic Backend Architecture
+- [PRINCIPLE_3_NAME] → III. Content Interaction & Intelligence
+- [PRINCIPLE_4_NAME] → IV. Core Educational Focus
+- [PRINCIPLE_5_NAME] → V. Book Content Structure & Standards
+- [PRINCIPLE_6_NAME] → VI. Visual & Interactive Design
+Added sections:
+- Additional Constraints
+- Development Workflow
+Templates requiring updates:
+- .specify/templates/plan-template.md: ⚠ pending
+- .specify/templates/spec-template.md: ⚠ pending
+- .specify/templates/tasks-template.md: ⚠ pending
+- .specify/templates/commands/*.md: ⚠ pending
+- runtime guidance docs (README.md, docs/quickstart.md): ⚠ pending
+Follow-up TODOs: None
+-->
+# Textbook for Teaching Physical AI & Humanoid Robotics Course Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Frontend Framework & UI/UX
+The digital book MUST be built using Docusaurus. The user interface, including the Chatbot widget, MUST be clean and responsive, with the Chatbot's open/close functionality controlled by an "AI HELP" button.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Agentic Backend Architecture
+The backend MUST implement an agentic workflow using the OpenAI Agents SDK. It MUST provide FastAPI REST APIs to connect with the frontend Chatbot widget.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Content Interaction & Intelligence
+The agentic backend MUST be capable of answering user questions based on the book's content, including specifically selected text, to provide contextual assistance.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Core Educational Focus
+The book's focus, theme, and goal MUST center on "AI Systems in the Physical World: Embodied Intelligence," bridging the gap between the digital brain and the physical body. The content MUST enable students to apply AI knowledge to control Humanoid Robots in simulated and real-world environments.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Book Content Structure & Standards
+The book's content MUST introduce Physical AI, covering design, simulation, and deployment of humanoid robots using ROS 2, Gazebo, and NVIDIA Isaac. It MUST be structured into modules, weekly breakdowns, assessments, and hardware requirements, with all weekly breakdowns and assessments directly based on the modules. Hyperlinks MUST be used where appropriate.
 
-### [PRINCIPLE_6_NAME]
+### VI. Visual & Interactive Design
+The book's layout and theme MUST reflect robotics aesthetics. The footer MUST also maintain a clean and responsive interface, consistent with the overall design.
 
+## Additional Constraints
 
-[PRINCIPLE__DESCRIPTION]
+*   **Book Content Generation:** Content generation MUST adhere to the described capstone introduction of Physical AI, focusing on design, simulation, and deployment of humanoid robots.
+*   **Book Layout:** The book's layout, including colors and theme, MUST consistently align with a robotics aesthetic.
+*   **Footer:** The footer interface MUST be clean and responsive.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Development Workflow
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+*   **Code Quality:** All code (frontend and backend) MUST be clean, maintainable, and responsive.
+*   **API Design:** Backend REST APIs MUST be well-documented and adhere to best practices for FastAPI.
+*   **Content Integration:** The Chatbot widget MUST seamlessly integrate with the backend API to provide accurate and contextual responses.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+The Constitution is the single source of truth for all project principles and design decisions. Amendments MUST be thoroughly documented, approved by stakeholders, and include a clear migration plan for any breaking changes. All pull requests and code reviews MUST explicitly verify compliance with these principles. Unnecessary complexity MUST always be avoided and justified if introduced.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 0.1.1 | **Ratified**: 2025-12-05 | **Last Amended**: 2025-12-05
