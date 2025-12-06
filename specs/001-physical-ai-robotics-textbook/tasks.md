@@ -23,15 +23,15 @@
 
 ### Frontend Setup
 
-- [ ] T001 Initialize Docusaurus project in `frontend/`
-- [ ] T002 Configure basic Docusaurus site settings in `frontend/docusaurus.config.js`
-- [ ] T003 [P] Configure CSS Modules for styling in `frontend/`
+- [X] T001 Initialize Docusaurus project in `frontend/`
+- [X] T002 Configure basic Docusaurus site settings in `frontend/docusaurus.config.js`
+- [x] T003 [P] Configure CSS Modules for styling in `frontend/`
 
 ### Backend Setup
 
-- [ ] T004 Initialize Python project and virtual environment in `backend/`
-- [ ] T005 Install FastAPI and Uvicorn in `backend/`
-- [ ] T006 Install OpenAI Agents SDK and Qdrant client in `backend/`
+- [X] T004 Initialize Python project and virtual environment in `backend/`
+- [X] T005 Install FastAPI and Uvicorn in `backend/`
+- [X] T006 Install OpenAI Agents SDK and Qdrant client in `backend/`
 
 ---
 
@@ -43,14 +43,14 @@
 
 ### Backend Core Services
 
-- [ ] T007 Implement Qdrant Vector Database client and connection logic in `backend/src/services/qdrant_service.py`
-- [ ] T008 Create FastAPI application instance and basic routing in `backend/src/api/main.py`
-- [ ] T009 Implement base AI Agent class and core logic using OpenAI Agents SDK in `backend/src/agents/base_agent.py`
+- [X] T007 Implement Qdrant Vector Database client and connection logic in `backend/src/services/qdrant_service.py`
+- [X] T008 Create FastAPI application instance and basic routing in `backend/src/api/main.py`
+- [X] T009 Implement base AI Agent class and core logic using OpenAI Agents SDK in `backend/src/agents/base_agent.py`
 
 ### Content Structure & Initial Data
 
-- [ ] T010 Define initial book content structure (modules, sections) and placeholder markdown files in `frontend/docs/`
-- [ ] T011 Create "Why Physical AI Matters" main page content in `frontend/docs/why-physical-ai-matters.mdx`
+- [X] T010 Define initial book content structure (modules, sections) and placeholder markdown files in `frontend/docs/`
+- [X] T011 Create "Why Physical AI Matters" main page content in `frontend/docs/why-physical-ai-matters.mdx`
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -64,9 +64,9 @@
 
 ### Frontend Development [US1]
 
-- [ ] T012 [P] [US1] Implement Docusaurus navigation menu for modules and sections in `frontend/src/components/Navbar/index.js`
-- [ ] T013 [P] [US1] Configure Docusaurus default search feature in `frontend/docusaurus.config.js`
-- [ ] T014 [US1] Ensure all book content (markdown) is searchable and indexed by Docusaurus in `frontend/docs/`
+- [X] T012 [P] [US1] Implement Docusaurus navigation menu for modules and sections in `frontend/src/components/Navbar/index.js`
+- [X] T013 [P] [US1] Configure Docusaurus default search feature in `frontend/docusaurus.config.js`
+- [X] T014 [US1] Ensure all book content (markdown) is searchable and indexed by Docusaurus in `frontend/docs/`
 
 ---
 
@@ -78,20 +78,20 @@
 
 ### Frontend Development [US2]
 
-- [ ] T015 [P] [US2] Create Chatbot widget React component with open/close functionality in `frontend/src/components/ChatbotWidget/index.js`
-- [ ] T016 [P] [US2] Create "AI HELP" button component to trigger chatbot in `frontend/src/components/AiHelpButton/index.js`
-- [ ] T017 [US2] Integrate Chatbot widget into Docusaurus layout in `frontend/src/theme/Layout/index.js`
-- [ ] T018 [US2] Implement user input handling and display of chatbot responses in `frontend/src/components/ChatbotWidget/index.js`
-- [ ] T019 [P] [US2] Implement functionality to send selected text to the backend with user questions in `frontend/src/components/ChatbotWidget/index.js`
+- [X] T015 [P] [US2] Create Chatbot widget React component with open/close functionality in `frontend/src/components/ChatbotWidget/index.js`
+- [X] T016 [P] [US2] Create "AI HELP" button component to trigger chatbot in `frontend/src/components/AiHelpButton/index.js`
+- [X] T017 [US2] Integrate Chatbot widget into Docusaurus layout in `frontend/src/theme/Layout/index.js`
+- [X] T018 [US2] Implement user input handling and display of chatbot responses in `frontend/src/components/ChatbotWidget/index.js`
+- [X] T019 [P] [US2] Implement functionality to send selected text to the backend with user questions in `frontend/src/components/ChatbotWidget/index.js`
 
 ### Agentic Backend Development [US2]
 
-- [ ] T020 [P] [US2] Define AI Agent persona as "Experienced Engineer of Physical AI & Humanoid Robotics" in `backend/src/agents/physical_ai_expert_agent.py`
-- [ ] T021 [P] [US2] Create FastAPI endpoint `/api/chat` to receive user questions and selected text in `backend/src/api/main.py`
-- [ ] T022 [P] [US2] Implement Qdrant retrieval tool for the AI Agent to fetch relevant book content in `backend/src/agents/tools/qdrant_retrieval_tool.py`
-- [ ] T023 [US2] Integrate Qdrant retrieval tool into the AI Agent workflow to answer questions based on book content in `backend/src/agents/physical_ai_expert_agent.py`
-- [ ] T024 [US2] Implement AI Agent logic to answer questions based *only* on provided book content (full text or selected text) in `backend/src/agents/physical_ai_expert_agent.py`
-- [ ] T025 [US2] Connect FastAPI `/api/chat` endpoint to the AI Agent for processing user queries in `backend/src/api/main.py`
+- [X] T020 [P] [US2] Define AI Agent persona as "Experienced Engineer of Physical AI & Humanoid Robotics" in `backend/src/agents/physical_ai_expert_agent.py`
+- [X] T021 [P] [US2] Create FastAPI endpoint `/api/chat` to receive user questions and selected text in `backend/src/api/main.py`
+- [X] T022 [P] [US2] Implement Qdrant retrieval tool for the AI Agent to fetch relevant book content in `backend/src/agents/tools/qdrant_retrieval_tool.py`
+- [X] T023 [US2] Integrate Qdrant retrieval tool into the AI Agent workflow to answer questions based on book content in `backend/src/agents/physical_ai_expert_agent.py`
+- [X] T024 [US2] Implement AI Agent logic to answer questions based *only* on provided book content (full text or selected text) in `backend/src/agents/physical_ai_expert_agent.py`
+- [X] T025 [US2] Connect FastAPI `/api/chat` endpoint to the AI Agent for processing user queries in `backend/src/api/main.py`
 
 **Checkpoint**: At this point, User Story 1 AND 2 should both work independently
 
@@ -105,19 +105,19 @@
 
 ### Content Writing [US3]
 
-- [ ] T026 [P] [US3] Create detailed content for Module 1: The Robotic Nervous System (ROS 2) in `frontend/docs/modules/module-1.mdx`
-- [ ] T027 [P] [US3] Create detailed content for Module 2: The Digital Twin (Gazebo & Unity) in `frontend/docs/modules/module-2.mdx`
-- [ ] T028 [P] [US3] Create detailed content for Module 3: The AI-Robot Brain (NVIDIA Isaac™) in `frontend/docs/modules/module-3.mdx`
-- [ ] T029 [P] [US3] Create detailed content for Module 4: Vision-Language-Action (VLA) in `frontend/docs/modules/module-4.mdx`
-- [ ] T030 [P] [US3] Generate weekly breakdown content based on modules in `frontend/docs/weekly-breakdowns/`
-- [ ] T031 [P] [US3] Generate assessment content based on modules in `frontend/docs/assessments/`
-- [ ] T032 [US3] Add all necessary hyperlinks within the book content (`frontend/docs/**/*.mdx`)
+- [X] T026 [P] [US3] Create detailed content for Module 1: The Robotic Nervous System (ROS 2) in `frontend/docs/modules/module-1.mdx`
+- [X] T027 [P] [US3] Create detailed content for Module 2: The Digital Twin (Gazebo & Unity) in `frontend/docs/modules/module-2.mdx`
+- [X] T028 [P] [US3] Create detailed content for Module 3: The AI-Robot Brain (NVIDIA Isaac™) in `frontend/docs/modules/module-3.mdx`
+- [X] T029 [P] [US3] Create detailed content for Module 4: Vision-Language-Action (VLA) in `frontend/docs/modules/module-4.mdx`
+- [X] T030 [P] [US3] Generate weekly breakdown content based on modules in `frontend/docs/weekly-breakdowns/`
+- [X] T031 [P] [US3] Generate assessment content based on modules in `frontend/docs/assessments/`
+- [X] T032 [US3] Add all necessary hyperlinks within the book content (`frontend/docs/**/*.mdx`)
 
 ### Frontend Development [US3]
 
-- [ ] T033 [P] [US3] Update Docusaurus sidebar configuration to include all modules, weekly breakdowns, and assessments in `frontend/sidebars.js`
-- [ ] T034 [US3] Ensure Docusaurus automatically generates navigation for all new content in `frontend/docusaurus.config.js`
-- [ ] T035 [US3] Verify all internal and external hyperlinks are correctly rendered and navigable across the book in `frontend/docs/`
+- [X] T033 [P] [US3] Update Docusaurus sidebar configuration to include all modules, weekly breakdowns, and assessments in `frontend/sidebars.js`
+- [X] T034 [US3] Ensure Docusaurus automatically generates navigation for all new content in `frontend/docusaurus.config.js`
+- [X] T035 [US3] Verify all internal and external hyperlinks are correctly rendered and navigable across the book in `frontend/docs/`
 
 **Checkpoint**: All user stories should now be independently functional
 

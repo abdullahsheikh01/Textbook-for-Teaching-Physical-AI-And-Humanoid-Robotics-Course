@@ -1,0 +1,170 @@
+---
+sidebar_position: 1
+title: "Module 1: The Robotic Nervous System (ROS 2)"
+---
+
+# Module 1: The Robotic Nervous System (ROS 2)
+
+## Overview
+
+Welcome to Module 1 of our comprehensive textbook on Physical AI & Humanoid Robotics. In this module, we'll explore the Robot Operating System (ROS 2), which serves as the nervous system for modern robotics applications. Just as the nervous system coordinates actions and responses in biological organisms, ROS 2 provides the communication infrastructure and tools necessary for robots to perceive, reason, and act in their environments.
+
+## Learning Objectives
+
+By the end of this module, you will be able to:
+
+- Understand the fundamental concepts of ROS 2 and its role in robotics
+- Implement basic ROS 2 nodes, topics, and services
+- Design communication patterns for robotic systems using ROS 2
+- Integrate sensors and actuators using ROS 2 interfaces
+- Debug and monitor ROS 2 systems effectively
+
+## Table of Contents
+
+1. [Introduction to ROS 2](#introduction-to-ros-2)
+2. [ROS 2 Architecture](#ros-2-architecture)
+3. [Nodes, Topics, and Services](#nodes-topics-and-services)
+4. [Working with Messages and Services](#working-with-messages-and-services)
+5. [ROS 2 Tools and Ecosystem](#ros-2-tools-and-ecosystem)
+6. [ROS 2 in Humanoid Robotics](#ros-2-in-humanoid-robotics)
+7. [Practical Exercises](#practical-exercises)
+
+## Introduction to ROS 2
+
+ROS 2 (Robot Operating System 2) is not an operating system in the traditional sense, but rather a flexible framework for writing robot software. It provides libraries, tools, and conventions that facilitate the development of complex robotic systems by abstracting away low-level details and providing standardized communication patterns.
+
+### Why ROS 2?
+
+ROS 2 evolved from the original ROS to address several key challenges in robotics development:
+
+- **Real-time capabilities**: Improved support for real-time systems
+- **Security**: Built-in security features for production environments
+- **Reliability**: Enhanced fault tolerance and communication reliability
+- **Multi-robot systems**: Better support for coordinating multiple robots
+- **Industrial adoption**: Designed with industrial applications in mind
+
+### Key Concepts
+
+ROS 2 introduces several fundamental concepts that form the backbone of robotic applications:
+
+- **Nodes**: Independent processes that perform computation
+- **Topics**: Named buses over which nodes exchange messages
+- **Services**: Synchronous request/response communication
+- **Actions**: Asynchronous goal-oriented communication with feedback
+- **Parameters**: Configuration values that can be changed at runtime
+
+## ROS 2 Architecture
+
+ROS 2 uses a distributed architecture where nodes can run on different machines and communicate over a network. This architecture is built on top of DDS (Data Distribution Service), which provides the underlying communication layer.
+
+### DDS Implementation
+
+Different DDS implementations can be used with ROS 2, including:
+
+- **Fast DDS** (default)
+- **Cyclone DDS**
+- **RTI Connext DDS**
+
+### Client Libraries
+
+ROS 2 supports multiple client libraries for different programming languages:
+
+- **rclcpp**: C++ client library
+- **rclpy**: Python client library
+- **rclrs**: Rust client library
+- **rclc**: C client library
+
+## Nodes, Topics, and Services
+
+### Nodes
+
+A node is an executable that uses ROS 2 to communicate with other nodes. Nodes are organized in a graph structure where they exchange messages, services, and parameters.
+
+Example of a simple ROS 2 node in Python:
+
+```python
+import rclpy
+from rclpy.node import Node
+
+class MinimalPublisher(Node):
+    def __init__(self):
+        super().__init__('minimal_publisher')
+        self.publisher_ = self.create_publisher(String, 'topic', 10)
+        timer_period = 0.5  # seconds
+        self.timer = self.create_timer(timer_period, self.timer_callback)
+
+    def timer_callback(self):
+        msg = String()
+        msg.data = 'Hello World: %d' % self.get_clock().now().nanoseconds
+        self.publisher_.publish(msg)
+```
+
+### Topics
+
+Topics enable asynchronous communication between nodes using a publish-subscribe pattern. Multiple publishers can publish to the same topic, and multiple subscribers can subscribe to the same topic.
+
+### Services
+
+Services provide synchronous request-response communication. A client sends a request to a service server, which processes the request and returns a response.
+
+## Working with Messages and Services
+
+Messages and services are defined using interface definition language (IDL) files. These definitions are used to generate language-specific code for different programming languages.
+
+### Message Definition Example
+
+```
+# geometry_msgs/Point.msg
+float64 x
+float64 y
+float64 z
+```
+
+### Service Definition Example
+
+```
+# example_interfaces/AddTwoInts.srv
+int64 a
+int64 b
+---
+int64 sum
+```
+
+## ROS 2 Tools and Ecosystem
+
+ROS 2 provides a rich set of tools for development, debugging, and monitoring:
+
+- **ros2 run**: Run nodes
+- **ros2 topic**: Work with topics
+- **ros2 service**: Work with services
+- **ros2 action**: Work with actions
+- **ros2 param**: Work with parameters
+- **rqt**: Graphical tools for visualization
+- **rviz2**: 3D visualization tool
+
+## ROS 2 in Humanoid Robotics
+
+ROS 2 is particularly well-suited for humanoid robotics applications due to its:
+
+- **Real-time capabilities**: Critical for control systems
+- **Modular architecture**: Enables independent development of different subsystems
+- **Standardized interfaces**: Facilitates integration of various sensors and actuators
+- **Simulation integration**: Seamless integration with Gazebo and other simulators
+
+## Practical Exercises
+
+1. **Node Creation**: Create a simple publisher and subscriber node that communicate sensor data.
+2. **Service Implementation**: Implement a service that processes sensor readings and returns computed values.
+3. **Parameter Management**: Create a node that uses parameters to configure its behavior at runtime.
+4. **ROS 2 Launch Files**: Write launch files to start multiple nodes simultaneously.
+5. **Real-time Performance**: Analyze the timing performance of your ROS 2 nodes.
+
+## Summary
+
+ROS 2 provides the foundational communication infrastructure for modern robotics applications. Its distributed architecture, standardized interfaces, and rich ecosystem of tools make it an essential component of any robotic system, particularly humanoid robots that require coordination between numerous sensors, actuators, and control systems.
+
+Understanding ROS 2 is crucial for developing complex robotic applications that require reliable communication, real-time performance, and modularity.
+
+## Next Steps
+
+In the next module, we'll explore how ROS 2 integrates with simulation environments, particularly Gazebo, to create digital twins of robotic systems.

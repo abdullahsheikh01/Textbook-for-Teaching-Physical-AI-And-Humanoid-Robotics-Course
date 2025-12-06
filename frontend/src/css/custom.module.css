@@ -1,0 +1,5 @@
+/* Add your custom styles here */
+
+.heroPrimary {
+  background-color: var(--ifm-color-primary);
+}

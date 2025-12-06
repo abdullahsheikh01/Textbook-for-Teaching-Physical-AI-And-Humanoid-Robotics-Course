@@ -1,0 +1,140 @@
+---
+sidebar_position: 1
+title: "Module 1 Assessment: ROS 2 Fundamentals"
+---
+
+# Module 1 Assessment: ROS 2 Fundamentals
+
+## Overview
+This assessment evaluates your understanding of the Robot Operating System (ROS 2) fundamentals, including its architecture, communication patterns, and development tools. The assessment includes both theoretical questions and practical exercises.
+
+## Learning Objectives Covered
+- Understanding ROS 2 architecture and components
+- Implementing nodes, topics, and services
+- Using ROS 2 tools for development and debugging
+- Integrating sensors and actuators with ROS 2
+
+## Assessment Structure
+
+### Part A: Multiple Choice Questions (20 points)
+Answer the following multiple choice questions. Each question is worth 2 points.
+
+1. What does DDS stand for in the context of ROS 2?
+   a) Distributed Data Service
+   b) Data Distribution Service
+   c) Dynamic Data System
+   d) Distributed Development System
+
+2. Which of the following is NOT a core concept in ROS 2?
+   a) Nodes
+   b) Topics
+   c) Classes
+   d) Services
+
+3. What is the default DDS implementation used by ROS 2?
+   a) Cyclone DDS
+   b) RTI Connext DDS
+   c) Fast DDS
+   d) OpenDDS
+
+4. Which client library is used for Python development in ROS 2?
+   a) rclcpp
+   b) rclpy
+   c) rclc
+   d) rcljava
+
+5. What type of communication pattern does a Topic use?
+   a) Request-response
+   b) Synchronous
+   c) Publish-subscribe
+   d) Peer-to-peer
+
+6. Which ROS 2 tool is used to view available topics?
+   a) ros2 node
+   b) ros2 topic
+   c) ros2 service
+   d) ros2 param
+
+7. What is the purpose of ROS 2 launch files?
+   a) To compile code
+   b) To start multiple nodes at once
+   c) To debug applications
+   d) To visualize data
+
+8. Which command is used to run a ROS 2 node?
+   a) ros2 run
+   b) ros2 launch
+   c) ros2 start
+   d) ros2 exec
+
+9. What is the main difference between Services and Actions in ROS 2?
+   a) Services are faster than Actions
+   b) Actions provide feedback and can be canceled
+   c) Services can only send one message
+   d) Actions are synchronous while Services are asynchronous
+
+10. Which file extension is used for ROS 2 message definitions?
+    a) .srv
+    b) .action
+    c) .msg
+    d) .ros
+
+### Part B: Short Answer Questions (30 points)
+Answer the following questions briefly (2-3 sentences each). Each question is worth 5 points.
+
+1. Explain the difference between a ROS 2 Node and a traditional process. How do nodes communicate with each other?
+
+2. Describe the publish-subscribe communication pattern in ROS 2. Provide an example scenario where this pattern would be appropriate.
+
+3. What are ROS 2 parameters and how are they different from messages sent via topics?
+
+4. Explain the concept of a ROS 2 package and how it differs from a ROS 2 node.
+
+5. What is the purpose of the ROS 2 Master (or daemon) and how does it facilitate communication between nodes?
+
+6. Describe how you would debug a ROS 2 system where nodes are not communicating as expected.
+
+### Part C: Practical Exercise (50 points)
+
+Create a ROS 2 package that implements a simple sensor fusion system:
+
+1. Create a custom message type that contains data from multiple sensors (e.g., temperature, humidity, and pressure) (10 points)
+
+2. Implement a sensor simulator node that publishes random sensor data at 1Hz (15 points)
+
+3. Implement a data processor node that subscribes to the sensor data, calculates a derived value (e.g., heat index), and publishes the result (15 points)
+
+4. Create a launch file that starts both nodes simultaneously (5 points)
+
+5. Document your code with comments explaining the ROS 2 concepts you've implemented (5 points)
+
+## Submission Requirements
+- Submit your answers to Part A and B as a PDF document
+- Submit your practical exercise as a zipped ROS 2 package
+- Include a README.md file explaining your implementation
+- All submissions are due by [due date]
+
+## Grading Rubric
+- Part A (Multiple Choice): 2 points per correct answer
+- Part B (Short Answer): 5 points per question based on accuracy and completeness
+- Part C (Practical):
+  - Correct message definition: 10 points
+  - Proper node implementation: 15 points
+  - Functionality and correctness: 15 points
+  - Launch file: 5 points
+  - Documentation: 5 points
+
+## Resources Allowed
+- Course materials and textbooks
+- ROS 2 official documentation
+- Your own notes and assignments
+- No collaboration on the practical exercise
+
+## Additional Notes
+- For the practical exercise, you may use either Python or C++ for implementation
+- Make sure your code follows ROS 2 best practices
+- Test your implementation before submission
+- Include error handling in your practical exercise
+
+## Solutions and Feedback
+Solutions will be provided after the submission deadline, and individual feedback will be given for the practical exercise.

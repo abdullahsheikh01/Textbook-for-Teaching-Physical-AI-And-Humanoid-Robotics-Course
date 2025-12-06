@@ -1,0 +1,18 @@
+.aiHelpButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 90px; /* Position above the chatbot widget if it's also fixed */
+  right: 20px;
+  z-index: 999;
+}
+
+.aiHelpButton:hover {
+  background-color: #218838;
+}
