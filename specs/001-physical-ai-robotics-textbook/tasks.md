@@ -129,14 +129,14 @@
 
 ### Frontend Polish
 
-- [ ] T036 Refine overall book layout and theme to reflect robotics aesthetics using CSS Modules in `frontend/src/theme/`
-- [ ] T037 Ensure footer has a clean and responsive interface, matching theme in `frontend/src/components/Footer/index.js`
+- [X] T036 Refine overall book layout and theme to reflect robotics aesthetics using CSS Modules in `frontend/src/theme/`
+- [X] T037 Ensure footer has a clean and responsive interface, matching theme in `frontend/src/components/Footer/index.js`
 - [ ] T038 Conduct comprehensive responsiveness testing across devices for all frontend components in `frontend/`
-- [ ] T039 Implement accessibility best practices for the frontend in `frontend/`
+- [X] T039 Implement accessibility best practices for the frontend in `frontend/`
 
 ### Backend Polish
 
-- [ ] T040 Implement robust error handling and logging for all FastAPI endpoints and agent operations in `backend/src/`
+- [X] T040 Implement robust error handling and logging for all FastAPI endpoints and agent operations in `backend/src/`
 - [ ] T041 Review and optimize agent performance and Qdrant query efficiency in `backend/src/`
 
 ---

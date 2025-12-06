@@ -11,32 +11,32 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Physical AI Fundamentals',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Master the fundamentals of Physical AI and embodied intelligence, from
+        perception and reasoning to action in the real world.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Complete Curriculum',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Comprehensive modules covering ROS 2, simulation environments, AI systems,
+        and Vision-Language-Action frameworks.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Interactive Learning',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Engage with interactive content, assessments, and an AI-powered assistant
+        to enhance your learning experience.
       </>
     ),
   },

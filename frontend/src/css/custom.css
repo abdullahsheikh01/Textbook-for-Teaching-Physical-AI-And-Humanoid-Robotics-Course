@@ -4,27 +4,159 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* Robotics-themed color palette */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #1061e8; /* Robotics blue */
+  --ifm-color-primary-dark: #0d4db5;
+  --ifm-color-primary-darker: #0c47a9;
+  --ifm-color-primary-darkest: #0a3c8d;
+  --ifm-color-primary-light: #3a7dff;
+  --ifm-color-primary-lighter: #6499ff;
+  --ifm-color-primary-lightest: #a9c9ff;
+  --ifm-color-secondary: #0a2c47; /* Deep robotics blue */
+  --ifm-color-tertiary: #2a4d69; /* Steel blue */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(16, 97, 232, 0.15);
+
+  /* Robotics-themed variables */
+  --robotics-border-radius: 4px;
+  --robotics-box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  --robotics-transition: all 0.2s ease;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark mode - robotics theme */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #4d9de9;
+  --ifm-color-primary-dark: #3a7dd4;
+  --ifm-color-primary-darker: #3472c0;
+  --ifm-color-primary-darkest: #2b5ea0;
+  --ifm-color-primary-light: #67b0ee;
+  --ifm-color-primary-lighter: #8bc8f3;
+  --ifm-color-primary-lightest: #c5ddf8;
+  --docusaurus-highlighted-code-line-bg: rgba(77, 157, 233, 0.2);
+
+  /* Dark mode specific colors */
+  --ifm-background-color: #0d1117;
+  --ifm-background-surface-color: #161b22;
+  --ifm-color-content: #e6edf3;
+  --ifm-color-content-secondary: #8b949e;
+}
+
+/* Robotics-themed layout elements */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header and navigation */
+.navbar {
+  background-color: var(--ifm-color-secondary);
+  box-shadow: var(--robotics-box-shadow);
+  border-bottom: 1px solid var(--ifm-color-primary);
+}
+
+/* Sidebar */
+.menu {
+  border-right: 1px solid var(--ifm-toc-border-color);
+}
+
+/* Cards and content containers */
+.card {
+  border-radius: var(--robotics-border-radius);
+  transition: var(--robotics-transition);
+  border: 1px solid rgba(16, 97, 232, 0.2);
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(16, 97, 232, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Code blocks */
+.code-block {
+  border-radius: var(--robotics-border-radius);
+  border: 1px solid rgba(16, 97, 232, 0.2);
+}
+
+/* Buttons */
+.button {
+  border-radius: var(--robotics-border-radius);
+  transition: var(--robotics-transition);
+}
+
+/* Robotics-themed admonitions */
+.admonition {
+  border-radius: var(--robotics-border-radius);
+  border-left-width: 4px;
+}
+
+.admonition-note {
+  border-left-color: var(--ifm-color-primary);
+}
+
+.admonition-tip {
+  border-left-color: #1e8e3e;
+}
+
+.admonition-caution {
+  border-left-color: #f9ab00;
+}
+
+.admonition-warning {
+  border-left-color: #e37400;
+}
+
+/* Responsive adjustments */
+@media (max-width: 996px) {
+  .navbar {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+}
+
+/* Accessibility improvements */
+.docusaurus-highlight-code-line {
+  background-color: var(--docusaurus-highlighted-code-line-bg);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+/* Custom scrollbar for better UX */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Dark mode scrollbar */
+[data-theme='dark'] ::-webkit-scrollbar-track {
+  background: #2d333b;
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: #444d56;
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
+  background: #545d67;
 }
